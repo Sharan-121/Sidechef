@@ -10,7 +10,9 @@ class CuisineScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Sidechef"),
+        title:const Text(
+          "Sidechef",
+        ),
       ),
       body: GridView(
         padding: const EdgeInsets.all(25),
