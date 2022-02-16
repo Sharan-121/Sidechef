@@ -21,7 +21,7 @@ class CuisineScreen extends StatelessWidget {
         children: <Widget>[
           ...cuisineData
               .map(
-                (data) => CuisineItem(title: data.title, color: data.color),
+                (data) => CuisineItem(title: data.title, color: data.color,id: data.id,),
               )
               .toList(),
         ],
