@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       title: 'Sidechef',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSwatch(
-          primarySwatch: Colors.orange,
+          primarySwatch: Colors.teal,
         ).copyWith(
           secondary: Colors.amber,
         ),

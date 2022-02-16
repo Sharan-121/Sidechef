@@ -10,9 +10,11 @@ class CuisineScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title:const Text(
+        title: const Text(
           "Sidechef",
         ),
+        backgroundColor: Colors.teal,
+        foregroundColor: Colors.white,
       ),
       body: GridView(
         padding: const EdgeInsets.all(25),
