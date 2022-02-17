@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:restaurant_cuisine_app/cuisine_recipe.dart';
 import 'package:restaurant_cuisine_app/cuisines_screen.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(const MyApp());
@@ -33,6 +33,9 @@ class MyApp extends StatelessWidget {
         ),
       ),
       home: const CuisineScreen(),
+      routes: {
+        '/CuisineRecipe': (ctx) => CuisineRecipe(),
+      },
     );
   }
 }

@@ -1,22 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:restaurant_cuisine_app/cuisine_recipe.dart';
+
 
 class CuisineItem extends StatelessWidget {
   final String title;
   final String id;
   final Color color;
 
-  CuisineItem({required this.title, required this.color,required this.id});
+  CuisineItem({required this.title, required this.color, required this.id});
 
   void selectCuisine(BuildContext ctx) {
-    Navigator.of(ctx).push(
-      MaterialPageRoute(builder: (_) {
-        return CuisineRecipe(
-          cuisineId: id,
-          cuisineName: title,
-        );
-      }),
+    Navigator.of(ctx).pushNamed(
+      '/CuisineRecipe',
+      arguments: {"id": id, "title": title,"color":color},
     );
   }
 
