@@ -3,8 +3,6 @@ import 'package:flutter/material.dart';
 import './models/cuisine.dart';
 import './models/meal.dart';
 
-
-
 const cuisineData = [
   Cuisine(id: "c1", title: "Italian", color: Colors.teal),
   Cuisine(id: "c2", title: "Quick & Easy", color: Colors.orange),
@@ -151,8 +149,8 @@ var recipeData = [
   Meal(
     id: 'm5',
     cuisines: [
-      'c2'
-          'c5',
+      'c2',
+      'c5',
       'c10',
     ],
     title: 'Salad with Smoked Salmon',
@@ -260,7 +258,7 @@ var recipeData = [
     affordability: Affordability.Pricey,
     complexity: Complexity.Challenging,
     imageUrl:
-        'https://cdn.pixabay.com/photo/2018/06/18/16/05/indian-food-3482749_1280.jpg',
+        'https://assets.vogue.in/photos/5efdf623800c753aed1a4acd/3:2/w_4522,h_3014,c_limit/chicken%20curry%20recipe%20homestyle%20chicken%20curry%20recipe%20easy%20recipes%20to%20make%20at%20home%20chicken%20and%20rice.jpg',
     duration: 35,
     ingredients: [
       '4 Chicken Breasts',

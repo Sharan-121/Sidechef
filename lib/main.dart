@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:restaurant_cuisine_app/cuisine_recipe.dart';
-import 'package:restaurant_cuisine_app/cuisines_screen.dart';
+import 'package:restaurant_cuisine_app/screen/cuisine_recipe.dart';
+import 'package:restaurant_cuisine_app/screen/cuisines_screen.dart';
 
 void main() {
   runApp(const MyApp());

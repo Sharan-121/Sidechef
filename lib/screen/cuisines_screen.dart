@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import './cuisine_data.dart';
-import './cuisine_item.dart';
+import '../cuisine_data.dart';
+import '../widgets/cuisine_item.dart';
 
 class CuisineScreen extends StatelessWidget {
   const CuisineScreen({Key? key}) : super(key: key);
