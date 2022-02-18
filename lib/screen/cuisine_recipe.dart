@@ -43,6 +43,8 @@ class CuisineRecipe extends StatelessWidget {
               duration: cuisineMatch[index].duration,
               imageUrl: cuisineMatch[index].imageUrl,
               title: cuisineMatch[index].title,
+              color: color,
+              id: cuisineMatch[index].id,
             );
           },
           itemCount: cuisineMatch.length,
