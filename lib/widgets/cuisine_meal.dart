@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 import '../models/meal.dart';
@@ -16,6 +18,32 @@ class CuisineMeal extends StatelessWidget {
       required this.imageUrl,
       required this.title});
 
+  String get complexityText {
+    switch (complexity) {
+      case Complexity.Simple:
+        return 'Simple';
+      case Complexity.Challenging:
+        return 'Challenging';
+      case Complexity.Hard:
+        return 'Hard';
+      default:
+        return 'Unknown';
+    }
+  }
+
+  String get affordabilityText {
+    switch (affordability) {
+      case Affordability.Affordable:
+        return 'Affordable';
+      case Affordability.Pricey:
+        return 'Pricey';
+      case Affordability.Luxurious:
+        return 'Luxury';
+      default:
+        return 'Unknown';
+    }
+  }
+
   void displayRecipe() {}
 
   @override
@@ -33,7 +61,7 @@ class CuisineMeal extends StatelessWidget {
                 ClipRRect(
                   child: Image.network(
                     imageUrl,
-                    height: 250,
+                    height: 200,
                     width: double.infinity,
                     fit: BoxFit.cover,
                   ),
@@ -42,7 +70,71 @@ class CuisineMeal extends StatelessWidget {
                     topRight: Radius.circular(15),
                   ),
                 ),
+                Positioned(
+                  bottom: 5,
+                  right: 10,
+                  child: Container(
+                    decoration: BoxDecoration(
+                        borderRadius:
+                            const BorderRadius.all(Radius.circular(10)),
+                        border: Border.all(color: Colors.black),
+                        color: Colors.black45),
+                    // color: Colors.black45,
+                    width: 180,
+                    child: Text(title,
+                        style: const TextStyle(
+                          fontSize: 22,
+                          color: Colors.white,
+                        ),
+                        softWrap: true,
+                        overflow: TextOverflow.fade),
+                  ),
+                ),
               ],
+            ),
+            Padding(
+              padding: EdgeInsets.all(15),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: <Widget>[
+                  Row(
+                    children: <Widget>[
+                      const Icon(Icons.schedule),
+                      const SizedBox(
+                        width: 5,
+                      ),
+                      Text(
+                        '$duration min',
+                        style: TextStyle(color: Colors.black),
+                      )
+                    ],
+                  ),
+                  Row(
+                    children: <Widget>[
+                      const Icon(Icons.work_outline),
+                      const SizedBox(
+                        width: 5,
+                      ),
+                      Text(
+                        complexityText,
+                        style: TextStyle(color: Colors.black),
+                      )
+                    ],
+                  ),
+                  Row(
+                    children: <Widget>[
+                      const Icon(Icons.attach_money),
+                      const SizedBox(
+                        width: 5,
+                      ),
+                      Text(
+                        affordabilityText,
+                        style: TextStyle(color: Colors.black),
+                      )
+                    ],
+                  ),
+                ],
+              ),
             ),
           ],
         ),
