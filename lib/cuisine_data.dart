@@ -27,7 +27,7 @@ var recipeData = [
     affordability: Affordability.Affordable,
     complexity: Complexity.Simple,
     imageUrl:
-        'https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Spaghetti_Bolognese_mit_Parmesan_oder_Grana_Padano.jpg/800px-Spaghetti_Bolognese_mit_Parmesan_oder_Grana_Padano.jpg',
+        'https://c4.wallpaperflare.com/wallpaper/346/714/528/pasta-4k-high-resolution-wallpaper-preview.jpg',
     duration: 20,
     ingredients: [
       '4 Tomatoes',
@@ -60,7 +60,7 @@ var recipeData = [
     affordability: Affordability.Affordable,
     complexity: Complexity.Simple,
     imageUrl:
-        'https://cdn.pixabay.com/photo/2018/07/11/21/51/toast-3532016_1280.jpg',
+        'https://ais-akamai.rtl.de/masters/1153351/1686x0/feierabend-wie-das-duftet-toast-hawaii.jpg',
     duration: 10,
     ingredients: [
       '1 Slice White Bread',
@@ -88,8 +88,7 @@ var recipeData = [
     title: 'Classic Hamburger',
     affordability: Affordability.Pricey,
     complexity: Complexity.Simple,
-    imageUrl:
-        'https://cdn.pixabay.com/photo/2014/10/23/18/05/burger-500054_1280.jpg',
+    imageUrl: 'https://images3.alphacoders.com/104/1048292.jpg',
     duration: 45,
     ingredients: [
       '300g Cattle Hack',
@@ -120,7 +119,7 @@ var recipeData = [
     affordability: Affordability.Luxurious,
     complexity: Complexity.Challenging,
     imageUrl:
-        'https://cdn.pixabay.com/photo/2018/03/31/19/29/schnitzel-3279045_1280.jpg',
+        'https://media.istockphoto.com/photos/homemade-breaded-wiener-schnitzel-served-with-parsley-and-lemon-picture-id1317641156?k=20&m=1317641156&s=612x612&w=0&h=ipvn7cgU8XkK0KGEGMJ-8a2JItKQOt5ZgHAdXYHJC3w=',
     duration: 60,
     ingredients: [
       '8 Veal Cutlets',
