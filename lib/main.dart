@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:restaurant_cuisine_app/screen/cuisine_recipe.dart';
 import 'package:restaurant_cuisine_app/screen/cuisines_screen.dart';
+import 'package:restaurant_cuisine_app/screen/tabs_screen.dart';
 import '../screen/recipe_screen.dart';
 
 void main() {
@@ -18,8 +19,6 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSwatch(
           primarySwatch: Colors.teal,
         ),
-
-
         fontFamily: 'Raleway',
         textTheme: const TextTheme(
           bodyText1:
@@ -32,13 +31,11 @@ class MyApp extends StatelessWidget {
           //     fontWeight: FontWeight.bold),
         ),
       ),
-      home: const CuisineScreen(),
+      home: const TabScreen(),
       routes: {
         '/CuisineRecipe': (ctx) => CuisineRecipe(),
         '/RecipeDetail': (ctx) => RecipeDetail(),
       },
-
-      
     );
   }
 }
