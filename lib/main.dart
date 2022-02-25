@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:restaurant_cuisine_app/screen/cuisine_recipe.dart';
+import 'package:restaurant_cuisine_app/screen/filter_screen.dart';
 
 import 'package:restaurant_cuisine_app/screen/tabs_screen.dart';
 import '../screen/recipe_screen.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  // const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -31,10 +32,11 @@ class MyApp extends StatelessWidget {
           //     fontWeight: FontWeight.bold),
         ),
       ),
-      home: const TabScreen(),
       routes: {
+        '/': (ctx) => TabScreen(),
         '/CuisineRecipe': (ctx) => CuisineRecipe(),
         '/RecipeDetail': (ctx) => RecipeDetail(),
+        '/FilterScreen': (ctx) => FilterScreen(),
       },
     );
   }

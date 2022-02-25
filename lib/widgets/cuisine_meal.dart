@@ -11,7 +11,8 @@ class CuisineMeal extends StatelessWidget {
   final int duration;
   final Complexity complexity;
   final Affordability affordability;
-  final Color color;
+  final Color color1;
+  final Color color2;
   final String id;
 
   CuisineMeal(
@@ -20,7 +21,8 @@ class CuisineMeal extends StatelessWidget {
       required this.duration,
       required this.imageUrl,
       required this.title,
-      required this.color,
+      required this.color1,
+       required this.color2,
       required this.id});
 
   String get complexityText {

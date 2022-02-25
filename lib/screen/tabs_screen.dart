@@ -3,6 +3,7 @@ import 'package:restaurant_cuisine_app/screen/cuisines_screen.dart';
 import 'package:restaurant_cuisine_app/screen/favorites_screen.dart';
 
 import 'package:hexcolor/hexcolor.dart';
+import 'package:restaurant_cuisine_app/widgets/main_drawer.dart';
 
 class TabScreen extends StatefulWidget {
   const TabScreen({Key? key}) : super(key: key);
@@ -38,6 +39,7 @@ class _TabScreenState extends State<TabScreen> {
             Tab(icon: Icon(Icons.star), text: "Favs"),
           ]),
         ),
+        drawer: MainDrawer(),
         body: TabBarView(children: <Widget>[
           CuisineScreen(),
           FavoritesScreen(),

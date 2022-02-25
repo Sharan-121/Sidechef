@@ -11,7 +11,8 @@ class CuisineRecipe extends StatelessWidget {
 
     final cuisineId = routeArgs["id"];
     final cuisineName = routeArgs["title"];
-    final Color color = routeArgs['color'] as Color;
+    final Color color1= routeArgs['color1'] as Color;
+     final Color color2 = routeArgs['color2'] as Color;
 
     final cuisineMatch = recipeData.where((meal) {
       return meal.cuisines.contains(cuisineId);
@@ -27,8 +28,8 @@ class CuisineRecipe extends StatelessWidget {
             decoration: BoxDecoration(
                 gradient: LinearGradient(
               colors: [
-                color.withOpacity(0.9),
-                color.withGreen(8),
+                color1.withOpacity(0.9),
+                color2.withGreen(8),
               ],
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
@@ -43,7 +44,8 @@ class CuisineRecipe extends StatelessWidget {
               duration: cuisineMatch[index].duration,
               imageUrl: cuisineMatch[index].imageUrl,
               title: cuisineMatch[index].title,
-              color: color,
+              color1: color1,
+              color2: color2,
               id: cuisineMatch[index].id,
             );
           },
