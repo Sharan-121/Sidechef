@@ -17,38 +17,32 @@ class _TabScreenState extends State<TabScreen> {
     return DefaultTabController(
       length: 2,
       child: Scaffold(
-          appBar: AppBar(
-            flexibleSpace: Container(
-              decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  colors: [HexColor("8360c3"), HexColor("2ebf91")],
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                ),
+        appBar: AppBar(
+          flexibleSpace: Container(
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                // colors: [HexColor("#ff512f"), HexColor("#dd2476")],
+                colors: [HexColor("#000428"), HexColor("#004e92")],
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
               ),
             ),
-            centerTitle: true,
-            title: const Text(
-              "SideChef",
-              style: TextStyle(fontWeight: FontWeight.w700, fontSize: 20),
-            ),
-            bottom: const TabBar(tabs: <Widget>[
-              Tab(icon: Icon(Icons.category), text: "Cuisines"),
-              Tab(icon: Icon(Icons.star), text: "Favs"),
-            ]),
           ),
-          body: Container(
-            decoration: BoxDecoration(
-                gradient: LinearGradient(
-              colors: [HexColor("8360c3"), HexColor("2ebf91")],
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-            )),
-            child: TabBarView(children: <Widget>[
-              CuisineScreen(),
-              FavoritesScreen(),
-            ]),
-          )),
+          centerTitle: true,
+          title: const Text(
+            "SideChef",
+            style: TextStyle(fontWeight: FontWeight.w700, fontSize: 20),
+          ),
+          bottom: const TabBar(tabs: <Widget>[
+            Tab(icon: Icon(Icons.food_bank), text: "Cuisines"),
+            Tab(icon: Icon(Icons.star), text: "Favs"),
+          ]),
+        ),
+        body: TabBarView(children: <Widget>[
+          CuisineScreen(),
+          FavoritesScreen(),
+        ]),
+      ),
     );
   }
 }

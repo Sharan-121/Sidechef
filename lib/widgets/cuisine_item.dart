@@ -4,14 +4,19 @@ import 'package:google_fonts/google_fonts.dart';
 class CuisineItem extends StatelessWidget {
   final String title;
   final String id;
-  final Color color;
+  final Color color1;
+  final Color color2;
 
-  CuisineItem({required this.title, required this.color, required this.id});
+  CuisineItem(
+      {required this.title,
+      required this.color1,
+      required this.color2,
+      required this.id});
 
   void selectCuisine(BuildContext ctx) {
     Navigator.of(ctx).pushNamed(
       '/CuisineRecipe',
-      arguments: {"id": id, "title": title, "color": color},
+      arguments: {"id": id, "title": title, "color1": color1, "color2": color2},
     );
   }
 
@@ -37,10 +42,7 @@ class CuisineItem extends StatelessWidget {
         ),
         decoration: BoxDecoration(
           gradient: LinearGradient(
-            colors: [
-              color.withOpacity(0.9),
-              color.withGreen(8),
-            ],
+            colors: [color1, color2],
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
           ),

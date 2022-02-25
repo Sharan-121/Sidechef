@@ -9,14 +9,14 @@ class CuisineScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GridView(
-      
       padding: const EdgeInsets.all(25),
       children: <Widget>[
         ...cuisineData
             .map(
               (data) => CuisineItem(
                 title: data.title,
-                color: data.color,
+                color1: data.color1,
+                color2: data.color2,
                 id: data.id,
               ),
             )

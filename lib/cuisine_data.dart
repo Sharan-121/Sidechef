@@ -1,19 +1,62 @@
 import 'package:flutter/material.dart';
+import 'package:hexcolor/hexcolor.dart';
 
 import './models/cuisine.dart';
 import './models/meal.dart';
 
-const cuisineData = [
-  Cuisine(id: "c1", title: "Italian", color: Colors.teal),
-  Cuisine(id: "c2", title: "Quick & Easy", color: Colors.orange),
-  Cuisine(id: "c3", title: "Hamburgers", color: Colors.brown),
-  Cuisine(id: "c4", title: "German", color: Colors.amberAccent),
-  Cuisine(id: "c5", title: "Light & Lovely", color: Colors.amber),
-  Cuisine(id: "c6", title: "Exotic", color: Colors.cyan),
-  Cuisine(id: "c7", title: "Breakfast", color: Colors.red),
-  Cuisine(id: "c8", title: "Asian", color: Colors.lightGreen),
-  Cuisine(id: "c9", title: "French", color: Colors.lightBlue),
-  Cuisine(id: "c10", title: "Summer", color: Colors.deepOrange),
+var cuisineData = [
+  Cuisine(
+      id: "c1",
+      title: "Italian",
+      color1: HexColor("#ff512f"),
+      color2: HexColor("#dd2476")),
+  Cuisine(
+    id: "c2",
+    title: "Quick & Easy",
+    color1: HexColor("#009fff"),
+      color2: HexColor("#ec2f4b"),
+  ),
+  Cuisine(
+      id: "c3",
+      title: "Hamburger",
+      color1: HexColor("#00FF5B"),
+      color2: HexColor("#0014FF")),
+  Cuisine(
+      id: "c4",
+      title: "German",
+      color1: HexColor("#f12711"),
+      color2: HexColor("#f5af19"),),
+  Cuisine(
+      id: "c5",
+      title: "Light & Lovely",
+      
+      color1: HexColor("#C33764"),
+      color2: HexColor("#1D2671")),
+  Cuisine(
+      id: "c6",
+      title: "Exotic",
+      color1: HexColor("#d53369"),
+      color2: HexColor("#cbad6d")),
+  Cuisine(
+      id: "c7",
+      title: "Breakfast",
+      color1: HexColor("#009fff"),
+      color2: HexColor("#ec2f4b")),
+  Cuisine(
+      id: "c8",
+      title: "Asian",
+      color1: HexColor("#02aab0"),
+      color2: HexColor("#00cdac")),
+  Cuisine(
+      id: "c9",
+      title: "French",
+      color1: HexColor("#FF0A6C"),
+      color2: HexColor("#2D27FF")),
+  Cuisine(
+      id: "c10",
+      title: "Summer",
+      color1: HexColor("#02aab0"),
+      color2: HexColor("#00cdac")),
 ];
 
 var recipeData = [
