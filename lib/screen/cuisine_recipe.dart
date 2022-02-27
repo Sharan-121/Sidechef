@@ -11,8 +11,8 @@ class CuisineRecipe extends StatelessWidget {
 
     final cuisineId = routeArgs["id"];
     final cuisineName = routeArgs["title"];
-    final Color color1= routeArgs['color1'] as Color;
-     final Color color2 = routeArgs['color2'] as Color;
+    final Color color1 = routeArgs['color1'] as Color;
+    final Color color2 = routeArgs['color2'] as Color;
 
     final cuisineMatch = recipeData.where((meal) {
       return meal.cuisines.contains(cuisineId);

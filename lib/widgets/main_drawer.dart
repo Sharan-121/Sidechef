@@ -38,7 +38,7 @@ class MainDrawer extends StatelessWidget {
               end: Alignment.bottomRight,
             )),
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           ListTile(
@@ -51,7 +51,7 @@ class MainDrawer extends StatelessWidget {
                   color: Colors.black),
             ),
             onTap: () {
-              Navigator.of(context).pushNamed('/');
+              Navigator.of(context).pushReplacementNamed('/');
             },
           ),
           ListTile(
@@ -64,7 +64,7 @@ class MainDrawer extends StatelessWidget {
                   color: Colors.black),
             ),
             onTap: () {
-              Navigator.of(context).pushNamed('/FilterScreen');
+              Navigator.of(context).pushReplacementNamed('/FilterScreen');
             },
           ),
         ],

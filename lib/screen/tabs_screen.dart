@@ -22,7 +22,6 @@ class _TabScreenState extends State<TabScreen> {
           flexibleSpace: Container(
             decoration: BoxDecoration(
               gradient: LinearGradient(
-                // colors: [HexColor("#ff512f"), HexColor("#dd2476")],
                 colors: [HexColor("#000428"), HexColor("#004e92")],
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
@@ -39,8 +38,8 @@ class _TabScreenState extends State<TabScreen> {
             Tab(icon: Icon(Icons.star), text: "Favs"),
           ]),
         ),
-        drawer: MainDrawer(),
-        body: TabBarView(children: <Widget>[
+        drawer: const MainDrawer(),
+        body: const TabBarView(children: <Widget>[
           CuisineScreen(),
           FavoritesScreen(),
         ]),

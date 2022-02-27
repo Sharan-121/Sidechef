@@ -15,15 +15,16 @@ class CuisineMeal extends StatelessWidget {
   final Color color2;
   final String id;
 
-  CuisineMeal(
-      {required this.affordability,
-      required this.complexity,
-      required this.duration,
-      required this.imageUrl,
-      required this.title,
-      required this.color1,
-       required this.color2,
-      required this.id});
+  CuisineMeal({
+    required this.affordability,
+    required this.complexity,
+    required this.duration,
+    required this.imageUrl,
+    required this.title,
+    required this.color1,
+    required this.color2,
+    required this.id,
+  });
 
   String get complexityText {
     switch (complexity) {
@@ -52,7 +53,7 @@ class CuisineMeal extends StatelessWidget {
   }
 
   void displayRecipe(BuildContext ctx) {
-    Navigator.of(ctx).pushNamed(RecipeDetail.routeName,arguments: id);
+    Navigator.of(ctx).pushNamed(RecipeDetail.routeName, arguments: id);
   }
 
   @override
