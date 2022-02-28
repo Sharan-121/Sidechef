@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:restaurant_cuisine_app/models/meal.dart';
 
-import '../cuisine_data.dart';
+
 import '../widgets/cuisine_meal.dart';
 
 class CuisineRecipe extends StatelessWidget {
+  final List<Meal> availableMeals;
+
+  CuisineRecipe({required this.availableMeals});
+
   @override
   Widget build(BuildContext context) {
     final routeArgs =
@@ -14,7 +19,7 @@ class CuisineRecipe extends StatelessWidget {
     final Color color1 = routeArgs['color1'] as Color;
     final Color color2 = routeArgs['color2'] as Color;
 
-    final cuisineMatch = recipeData.where((meal) {
+    final cuisineMatch = availableMeals.where((meal) {
       return meal.cuisines.contains(cuisineId);
     }).toList();
 
