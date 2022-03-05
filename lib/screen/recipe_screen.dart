@@ -5,9 +5,12 @@ import 'package:flutter/material.dart';
 import '../cuisine_data.dart';
 
 class RecipeDetail extends StatelessWidget {
-  const RecipeDetail({Key? key}) : super(key: key);
-
   static const routeName = '/RecipeDetail';
+
+  final Function toggleFavorite;
+  final Function isMealFav;
+
+  RecipeDetail({required this.toggleFavorite, required this.isMealFav});
 
   Widget buildSectionText(BuildContext ctx, String text) {
     return Container(
@@ -84,7 +87,10 @@ class RecipeDetail extends StatelessWidget {
           ),
         ]),
       ),
-      
+      floatingActionButton: FloatingActionButton(
+        onPressed: () => toggleFavorite(recipeId),
+        child: Icon(isMealFav(recipeId) ? Icons.star : Icons.star_border),
+      ),
     );
   }
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:restaurant_cuisine_app/models/meal.dart';
 import 'package:restaurant_cuisine_app/screen/cuisines_screen.dart';
 import 'package:restaurant_cuisine_app/screen/favorites_screen.dart';
 
@@ -6,7 +7,11 @@ import 'package:hexcolor/hexcolor.dart';
 import 'package:restaurant_cuisine_app/widgets/main_drawer.dart';
 
 class TabScreen extends StatefulWidget {
-  const TabScreen({Key? key}) : super(key: key);
+ 
+
+  final List<Meal> favoriteMeals;
+
+  TabScreen({required this.favoriteMeals});
 
   @override
   _TabScreenState createState() => _TabScreenState();
@@ -39,9 +44,9 @@ class _TabScreenState extends State<TabScreen> {
           ]),
         ),
         drawer: const MainDrawer(),
-        body: const TabBarView(children: <Widget>[
-          CuisineScreen(),
-          FavoritesScreen(),
+        body: TabBarView(children: <Widget>[
+          const CuisineScreen(),
+          FavoritesScreen(favoriteMeals:widget.favoriteMeals),
         ]),
       ),
     );
